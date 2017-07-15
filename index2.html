@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Профиль пользователя</title>
+
+	<script type="text/javascript">
+	    
+    function setFormData(){
+        var userData1 = {firstName: "Sergey", midName: "Ivanovich", lastName: "Smirnov"};  
+        //        
+        // заполняем поле ввода на основе данных объекта 
+        document.getElementById('fName').value = userData1.firstName;
+        document.getElementById('mName').value = userData1.midName;
+        document.getElementById('lName').value = userData1.lastName;
+        // заполняем поле FIO
+        document.getElementById('fio').value = userData1.lastName + ' ' + 
+                                               userData1.firstName + ' ' +
+                                               userData1.midName;        
+    }
+	</script>
+
+</head>
+<body onload="setFormData();">
+
+<!-- создаем 3 поля ввода для отображения Имени Отчества и Фамилии пользователя -->
+<!-- создаем 1 поле ввода доступное только для чтения для отображения ФИО -->
+Имя: <input type="text" name="fName" id="fName">
+Отчество: <input type="text" name="mName" id="mName">
+Фамилия: <input type="text" name="lName" id="lName">
+
+<!-- используем атрибут readonly - для запрета ввода в данное поле--> 
+ФИО: <input readonly type="text" name="fio" id="fio">
+
+
+</body>
+</html>
